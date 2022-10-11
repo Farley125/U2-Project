@@ -1,0 +1,48 @@
+LinearEquation class
+Instance Variables:
+    private int x1
+    private int x2
+    private int y1
+    private int y2
+    private String slope
+Constructor:
+    LinearEquation(int x1,int x2,int y1,int y2)
+    LinearEquation(int x1)
+
+Methods:
+    public String toString()
+    - This will return the following information as a string:
+    - The two original points
+    - The equation of the line through the two points in y = mx + b format
+    - The slope of the line (as a fraction) using distanceX() and distanceY()
+    - The y-intercept of the line
+    - The distance between the two points
+
+    public String slope()
+    This will return the slope as a fraction as a string.
+
+    public int distanceX(int x1, int x2)
+    This will return the difference of the two x values.
+
+    public int distanceY(int y1, int y2)
+    This will return the difference of the two y values.
+
+    public double yIntercept()
+    This will calculate the y-Intercept of the two given points using the slope and one of the given coordinates and return it as a double.
+    y1-(slope*x1) = b
+
+    public double distanceBetween()
+    This will calculate the distanceBetween the two given points using pythagorean theorem. java.lang.Math.sqrt(distanceX^2 + distanceY^2) and return the value as a double.
+
+
+
+EquationRunner class
+    Step 1: Require the user to input the first coordinate
+    Step 2: Require the user to input the second coordinate
+    Step 3: Print the required information
+    Step 4: Require the user to input an x value.
+    Step 5: Print the y value and the inputted x value as a coordinate.
+
+
+ This will calculate the slope of the given values. (x2 - x1)/(y2-y1) and return a .
+ System.out.format("%.2f%n", variable)

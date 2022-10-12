@@ -1,10 +1,14 @@
 LinearEquation class
 Instance Variables:
+    private String original1
+    private String original2
     private int x1
     private int x2
+    private int x3
     private int y1
     private int y2
-    private String slope
+    private String slopeStr
+    private double slopeVal
 Constructor:
     LinearEquation(int x1,int x2,int y1,int y2)
     LinearEquation(int x1)
@@ -18,8 +22,14 @@ Methods:
     - The y-intercept of the line
     - The distance between the two points
 
-    public String slope()
+    public void dataSort(String input)
+    This will sort the inputted coordinates into x1, x2, y1, y2 and store original input as strings
+
+    public String slopeStr()
     This will return the slope as a fraction as a string.
+
+    public double slopeVal()
+    This will return the slope as a double.
 
     public int distanceX(int x1, int x2)
     This will return the difference of the two x values.
@@ -32,17 +42,21 @@ Methods:
     y1-(slope*x1) = b
 
     public double distanceBetween()
-    This will calculate the distanceBetween the two given points using pythagorean theorem. java.lang.Math.sqrt(distanceX^2 + distanceY^2) and return the value as a double.
+    This will calculate the distanceBetween the two given points using pythagorean theorem, java.lang.Math.sqrt(distanceX^2 + distanceY^2) and return the value as a double.
+
+    public double yCalc(int x)
+    This will calculate the y value for a given x value.
 
 
 
 EquationRunner class
     Step 1: Require the user to input the first coordinate
     Step 2: Require the user to input the second coordinate
-    Step 3: Print the required information
-    Step 4: Require the user to input an x value.
-    Step 5: Print the y value and the inputted x value as a coordinate.
+    Step 3: Call dataSort() and then create a new object with the data sorted.
+    Step 4: Use toString to convert data all data to strings.
+    Step 5: Print the required information
+    Step 6: Require the user to input an x value.
+    Step 7: Print the y value (calculated with yCalc()) and the inputted x value as a coordinate.
 
 
- This will calculate the slope of the given values. (x2 - x1)/(y2-y1) and return a .
  System.out.format("%.2f%n", variable)

@@ -4,14 +4,16 @@ Instance Variables:
     private String original2
     private int x1
     private int x2
-    private int x3
     private int y1
     private int y2
-    private String slopeStr
+    private int distanceX
+    private int distanceY
     private double slopeVal
+    private String slopeStr
 Constructor:
-    LinearEquation(int x1,int x2,int y1,int y2)
-    LinearEquation(int x1)
+    LinearEquation(String input1, String input2)
+    Will also calculate and store other values such as the two sets of x and y values, the distance between the sets of x and y values (x2-x1, y2,y1),
+    the slope (as a string and double), and the original coordinates.
 
 Methods:
     public String toString()
@@ -21,21 +23,6 @@ Methods:
     - The slope of the line (as a fraction) using distanceX() and distanceY()
     - The y-intercept of the line
     - The distance between the two points
-
-    public void dataSort(String input)
-    This will sort the inputted coordinates into x1, x2, y1, y2 and store original input as strings
-
-    public String slopeStr()
-    This will return the slope as a fraction as a string.
-
-    public double slopeVal()
-    This will return the slope as a double.
-
-    public int distanceX(int x1, int x2)
-    This will return the difference of the two x values.
-
-    public int distanceY(int y1, int y2)
-    This will return the difference of the two y values.
 
     public double yIntercept()
     This will calculate the y-Intercept of the two given points using the slope and one of the given coordinates and return it as a double.
@@ -52,9 +39,9 @@ Methods:
 EquationRunner class
     Step 1: Require the user to input the first coordinate
     Step 2: Require the user to input the second coordinate
-    Step 3: Call dataSort() and then create a new object with the data sorted.
-    Step 4: Use toString to convert data all data to strings.
-    Step 5: Print the required information
+    Step 3: Create an object using the LinearEquation(String input1, String input2) constructor with the two user inputs as parameters.
+    Step 4: Call the new object into toString to convert data all data to strings.
+    Step 5: Print the required information.
     Step 6: Require the user to input an x value.
     Step 7: Print the y value (calculated with yCalc()) and the inputted x value as a coordinate.
 
